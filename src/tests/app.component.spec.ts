@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
-import { ShowSocksComponent } from './show-socks/show-socks.component';
+import { AppComponent } from '../app/app.component';
+import { ShowSocksComponent } from '../app/show-socks/show-socks.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -37,9 +37,16 @@ describe('AppComponent', () => {
 
   it('should create show-socks component', () => {
     const fixture = TestBed.createComponent(ShowSocksComponent);
-    fixture.detectChanges();
+    fixture.detectChanges(); 
     const compiled = fixture.debugElement.nativeElement;
     expect(ShowSocksComponent).toBeTruthy();
+  });
+
+  it('should create show-socks component', () => {
+    const fixture = TestBed.createComponent(ShowSocksComponent);
+    fixture.detectChanges(); 
+    const compiled = fixture.debugElement.nativeElement;
+    expect(ShowSocksComponent).toBeFalsy();
   });
 });
 

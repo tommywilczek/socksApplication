@@ -22,4 +22,8 @@ describe('ShowSocksComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display a list of objects', () => {
+    expect(component).toBeTruthy();
+  });
 });

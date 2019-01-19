@@ -42,11 +42,5 @@ describe('AppComponent', () => {
     expect(ShowSocksComponent).toBeTruthy();
   });
 
-  it('should create show-socks component', () => {
-    const fixture = TestBed.createComponent(ShowSocksComponent);
-    fixture.detectChanges(); 
-    const compiled = fixture.debugElement.nativeElement;
-    expect(ShowSocksComponent).toBeFalsy();
-  });
 });
 

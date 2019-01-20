@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SockBase } from './sock-base';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,10 @@ export class SockService {
   constructor() { }
 
   getSocks() {
-    let socks : SockBase[] = []
-    console.log(typeof socks)
+    const socks: SockBase[] = [
+      { name: 'my first sock' }
+    ];
+    console.log(Array.isArray(socks));
     return socks;
   }
 }

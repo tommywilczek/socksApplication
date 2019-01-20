@@ -12,7 +12,7 @@ export class ShowSocksComponent implements OnInit {
   constructor(private sockService: SockService) {}
 
   ngOnInit() {
-    this.sockService.getSocks()
+    this.sockService.getSocks();
   }
 
 }

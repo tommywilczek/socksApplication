@@ -9,7 +9,7 @@ describe('SockService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({}),
-    service = new SockService()
+    service = new SockService();
   });
 
   afterEach(() => {
@@ -21,7 +21,7 @@ describe('SockService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should make a list of socks', () => {
-    expect(service.getSocks() instanceof Array).toBe(true);
+  it('should make a list', () => {
+    expect(Array.isArray(service.getSocks())).toBe(true);
   });
 });

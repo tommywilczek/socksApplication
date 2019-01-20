@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SockService } from '../sock.service';
+import { SockBase } from '../sock-base';
 
 @Component({
   selector: 'app-show-socks',
@@ -9,10 +10,16 @@ import { SockService } from '../sock.service';
 })
 export class ShowSocksComponent implements OnInit {
 
+  socks: SockBase[];
+
   constructor(private sockService: SockService) {}
 
   ngOnInit() {
-    this.sockService.getSocks();
+    this.getSocks()
+  }
+
+  getSocks() {
+    return this.sockService.getSocks()
   }
 
 }

@@ -23,4 +23,7 @@ describe('ShowSocksComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should get an array from the sock service', () => {
+    expect(Array.isArray(component.getSocks())).toBe(true);
+  });
 });

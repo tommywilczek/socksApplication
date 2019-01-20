@@ -40,8 +40,9 @@ describe('ShowSocksComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get an object from the sock service', () => {
-    expect(component.getSocks).toBeTruthy();
+  it('should recieve the sock list from the service', () => {
+    service.testSockArray = [ { name: 'test' }, { name: 'data' } ];
+    expect(component.getSocks()).toBe(service.testSockArray);
   });
 
   it('noSocks returns true if the socks list is empty', () => {

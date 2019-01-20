@@ -15,11 +15,22 @@ export class ShowSocksComponent implements OnInit {
   constructor(private sockService: SockService) {}
 
   ngOnInit() {
-    this.getSocks()
+    this.getSocks();
   }
 
   getSocks() {
-    return this.sockService.getSocks()
+    console.log('component recieves:', this.sockService.getSocks())
+    return this.sockService.getSocks();
+    
+  }
+
+  noSocks(): boolean {
+    if(this.getSocks().length == 0) {
+      return true
+    }
+    else {
+      return false
+    }
   }
 
 }

@@ -4,7 +4,7 @@ import { ShowSocksComponent } from './show-socks.component';
 import { SockBase } from '../sock-base';
 
 class MockedSockService {
-  testSockArray: SockBase[]
+  testSockArray: SockBase[];
 
   getSocks() {
     return this.testSockArray;
@@ -26,7 +26,7 @@ describe('ShowSocksComponent', () => {
   beforeEach(() => {
     service = new MockedSockService();
     fixture = TestBed.createComponent(ShowSocksComponent);
-    //component = fixture.componentInstance;
+    // component = fixture.componentInstance;
     component = new ShowSocksComponent(service);
     fixture.detectChanges();
   });
@@ -45,7 +45,7 @@ describe('ShowSocksComponent', () => {
   });
 
   it('noSocks returns true if the socks list is empty', () => {
-    service.testSockArray = []
+    service.testSockArray = [];
     expect(component.noSocks()).toBe(true);
   });
 });

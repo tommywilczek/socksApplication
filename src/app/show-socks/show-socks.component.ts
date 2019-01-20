@@ -19,17 +19,15 @@ export class ShowSocksComponent implements OnInit {
   }
 
   getSocks() {
-    console.log('component recieves:', this.sockService.getSocks())
+    console.log('component recieves:', this.sockService.getSocks());
     return this.sockService.getSocks();
-    
   }
 
   noSocks(): boolean {
-    if(this.getSocks().length == 0) {
-      return true
-    }
-    else {
-      return false
+    if (this.getSocks().length === 0) {
+      return true;
+    } else {
+      return false;
     }
   }
 

@@ -13,7 +13,6 @@ export class SockService {
     const socks: SockBase[] = [
       { name: 'my first sock' }
     ];
-    console.log(Array.isArray(socks));
     return socks;
   }
 }

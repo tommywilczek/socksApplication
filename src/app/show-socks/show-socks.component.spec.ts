@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShowSocksComponent } from './show-socks.component';
 import { SockBase } from '../sock-base';
 import { SockService } from '../sock.service';
+import { DebugElement } from '@angular/core';
 
 
 describe('ShowSocksComponent', () => {
@@ -40,9 +41,15 @@ describe('ShowSocksComponent', () => {
     expect(component.getSocks()).toBe(testData);
   });
 
-  it('noSocks returns true if the socks list is empty', () => {
-    spyOn(service, 'getSocks').and.returnValue([]);
-    expect(component.noSocks()).toBe(true);
+  it('should render a no socks message if the sock list is empty', () => {
+    const testData: SockBase[] = [];
+    fixture = TestBed.createComponent(ShowSocksComponent);
+    service = fixture.debugElement.injector.get(SockService);
+    spyOn(service, 'getSocks').and.returnValue(testData);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const h1 = compiled.querySelector('h1');
+    expect(h1.textContent).toContain('no socks');
   });
 
 });

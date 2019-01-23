@@ -1,3 +1,7 @@
+<h1 *ngIf="!socks.length">You have no socks in your drawer. Go do some laundry.</h1>
+<ul *ngFor="let sock of socks">
+  <li>{{sock.name}}</li>
+</ul>
 <p>
-  show-socks works! 
+  show-socks works! !
 </p>

@@ -52,4 +52,17 @@ describe('ShowSocksComponent', () => {
     expect(h1.textContent).toContain('no socks');
   });
 
+  it('should render sock list', () => {
+    const testData: SockBase[] = [ { name: 'test' }, { name: 'data' } ];
+    fixture = TestBed.createComponent(ShowSocksComponent);
+    service = fixture.debugElement.injector.get(SockService);
+    spyOn(service, 'getSocks').and.returnValue(testData);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const renderedList = compiled.querySelectorAll('li');
+    console.log('RENDERED LIST!!!!!:', renderedList);
+    expect(renderedList[0].innerText).toBe('test');
+    expect(renderedList[1].innerText).toBe('data');
+  });
+
 });

@@ -60,7 +60,6 @@ describe('ShowSocksComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     const renderedList = compiled.querySelectorAll('li');
-    console.log('RENDERED LIST!!!!!:', renderedList);
     expect(renderedList[0].innerText).toBe('test');
     expect(renderedList[1].innerText).toBe('data');
   });

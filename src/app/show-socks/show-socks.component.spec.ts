@@ -65,3 +65,7 @@ describe('ShowSocksComponent', () => {
   });
 
 });
+// Arrange, Act, Assert
+// growing OO sofware with tests GOOST
+// Exceptional Javascript, yellow cover
+// website: let's do test driven js, james shore
